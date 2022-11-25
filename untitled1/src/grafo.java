@@ -1,21 +1,36 @@
 import java.util.ArrayList;
 
+/**
+ * Clase que contiene caracteristicas de grafo y operaciones
+ */
 public class grafo {
     private int vertex;
 
     public static ArrayList<edge> edgeList = new ArrayList<edge>();
 
 
-
+    /**
+     * retornavertice
+     * @return
+     */
     public int getVertex() {
         return vertex;
     }
 
+    /**
+     * Setea vertice
+     * @param vertex
+     */
     public void setVertex(int vertex) {
         this.vertex = vertex;
     }
 
     // grafo dirigido y con pesos hecho con matriz de ajdacencia.
+
+    /**
+     * Genera grafo
+     * @return
+     */
     public static ArrayList<edge> generarGrafo(){
 
         int min = 2;
@@ -95,6 +110,13 @@ public class grafo {
         }
         return edgeList;
     }
+
+    /**
+     * Anade grafo
+     * @param Inicio
+     * @param Final
+     * @param Peso
+     */
     public static void GraphAdd(int Inicio, int Final, int Peso){
         edgeList.add(new edge(Inicio, Final, Peso));
     }
